@@ -1,0 +1,25 @@
+# Node.js
+node_modules/
+dist/
+build/
+*.log
+
+# TypeScript
+*.tsbuildinfo
+
+# Env files
+.env
+.env.*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# pnpm
+pnpm-lock.yaml
+.pnpm-debug.log

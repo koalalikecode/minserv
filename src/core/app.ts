@@ -21,7 +21,7 @@ export class App {
     this.middlewares.push(middleware);
   }
 
-  listen(port: number) {
+  listen(port: number, callback?: () => void) {
     const server = createServer((req, res) => {
       const request = new Request(req);
       const response = new Response(res);
@@ -45,8 +45,6 @@ export class App {
       next();
     });
 
-    server.listen(port, () => {
-      console.log(`Server listening on port ${port}`);
-    });
+    server.listen(port, callback);
   }
 }
